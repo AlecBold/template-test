@@ -1,0 +1,106 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<section>
+    <div class="greet">
+        <div class="left container">
+            <div class="block">
+                <h1>Donec lobortis risus a elit</h1>
+                <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Pellentesque malesuada nulla a mi.  Donec fermentum.</p>
+                <a href="#">ABOUT US</a>
+            </div>
+        </div>
+        <div class="right container"></div>
+    </div>
+</section>
+<section>
+    <div class="about-section" id="about-section">
+        <div class="container">
+            <div class="info cont show-on-scroll">
+                <h1>About us</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <a href="#">SIGN UP</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="whitespace-block"></div>
+</section>
+<section>
+    <div class="gallery-test" id="gallery-section">
+        <div class="container">
+            <div class="gal-cont">
+                <div class="gallery" style="transform: translateX(100%);">
+                    {% for i in '01'|make_list %}
+                        {% for obj in gallery %}
+                            <div class="cont-img {{ obj.name }}">
+                                <span style="background-image: url('{{ MEDIA_URL }}{{ obj.image }}');"></span>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            <!--buttons-->
+            <div class="gallery-buttons-slide">
+                <div class="prev cont-button">
+                    <a class="button-slide" onclick="nextImg(-1)" href="#!"></a>
+                </div>
+                <div class="next cont-button">
+                    <a class="button-slide" onclick="nextImg(+1)" href="#!"></a>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <div class="info-gal">
+                    <div class="cont-info">
+                        <a class="button-slide left bar" onclick="nextImg(-1)" href="#!">
+                            <span class="text">prev</span>
+                            <span class="divider" style="color: black"> / </span>
+                            <span class="text-page"></span>
+                        </a>
+                        <div class="center bar">
+                            <p class="text-page"></p>
+                        </div>
+                        <a class="button-slide right bar" onclick="nextImg(+1)" href="#!">
+                            <span class="text-page"></span>
+                            <span class="divider" style="color: black"> / </span>
+                            <span class="text">next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="workers-section" id="workers-section">
+        <div class="left container">
+            <div class="basic cont">
+                <div class="info">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="relative cont">
+                {% for wrk in workers %}
+                    <div class="worker" style="background: {{ wrk.background_color }};">
+                        <div class="container">
+                            <span style="background-image: url('{{ MEDIA_URL }}{{ wrk.image }}');"></span>
+                            <p>{{ wrk.name }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="right container">
+            <div class="name-workers">
+                {% for wrk in workers %}
+                    <a class="text">{{ wrk.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
