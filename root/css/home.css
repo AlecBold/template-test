@@ -1,0 +1,717 @@
+main #main-body .greet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+main .greet .container {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallup.net/wp-content/uploads/2015/12/267776-Smoky_Mountains-Tennessee-forest-mountain-landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main .greet .container.left {
+    background: var(--color-light-grey);
+    display: flex;
+    align-items: center;
+}
+
+main .greet .container.left .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    max-width: 900px;
+}
+
+main .greet .container.left .block h1 {
+    text-transform: ;
+    color: white;
+    text-align: center;
+    font-family: var(--h2-font-style);
+    font-size: 33px;
+    font-weight: 200;
+}
+
+main .greet .container.left .block p {
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    word-spacing: 3px;
+    line-height: 2rem;
+}
+
+main .greet .container.left .block a {
+    margin-top: 4rem;
+    padding: 10px 25px;
+    background: white;
+    color: black;
+    font-family: var(--button-font-style);
+    font-size: 22px;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+main .greet .container.left .block a:hover {
+    background: var(--color-grey);
+    color: white;
+}
+
+main .greet .container.left .block * {
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1000px) {
+    main .greet .container.left .block h1 {
+        font-size: 25px
+    }
+    main .greet .container.left .block p {
+        font-size: 19px;
+        line-height: 1.8rem;
+    }
+    main .greet .container.left .block a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 770px) {
+    main .greet .container.left .block {
+        padding: 5rem 1rem;
+    }
+    main .greet .container.left .block h1 {
+        font-size: 25px
+    }
+    main .greet .container.left .block p {
+        font-size: 19px;
+        line-height: 1.8rem;
+    }
+    main .greet .container.left .block a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    main .greet .container.left .block * {
+        margin-bottom: 1.5rem;
+    }
+    main .greet .container.left .block h1 {
+        font-size: 23px
+    }
+    main .greet .container.left .block p {
+        text-align: left;
+        line-height: 1.5rem;
+        font-size: 15px;
+    }
+    main .greet .container.left .block a {
+        margin-top: 3rem;
+        font-size: 15px;
+    }
+}
+
+main section .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    background: var(--color-light-skin);
+}
+
+main .about-section .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 4rem;
+}
+
+main .about-section .container .info.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+    transform: translate(0, 60px);
+    transition: transform 0.7s ease-out,
+                opacity 1.5s ease;
+}
+
+main .about-section .container .info.cont.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+main .about-section .container .info.cont > * {
+    margin-bottom: 2rem;
+    color: black;
+}
+
+main .about-section .container .info.cont h1 {
+    font-family: var(--h2-font-style);
+    font-size: 33px;
+    font-weight: 100;
+}
+
+main .about-section .container .info.cont p {
+    text-align: center;
+    font-size: 23px;
+    line-height: 2rem;
+}
+
+main .about-section .container .info.cont a {
+    padding: 10px 25px;
+    background: white;
+    color: black;
+    font-family: var(--button-font-style);
+
+    font-size: 22px;
+    margin-top: 2rem;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+main .about-section .container .info.cont a:hover {
+    background: var(--color-grey);
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    main .about-section .container .info.cont > * {
+        margin-bottom: 1.5rem;
+    }
+
+    main .about-section .container .info.cont h1 {
+        font-size: 25px;
+    }
+
+    main .about-section .container .info.cont p {
+        font-size: 19px;
+        line-height: 1.8rem;
+    }
+
+    main .about-section .container .info.cont a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    main .about-section .container .info.cont > * {
+        margin-bottom: 1.5rem;
+    }
+
+    main .about-section .container .info.cont h1 {
+        font-size: 23px;
+    }
+
+    main .about-section .container .info.cont p {
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+
+    main .about-section .container .info.cont a {
+        font-size: 15px;
+    }
+}
+
+main .gallery-test {
+
+    padding: 5rem 0;
+    background: var(--color-light-blue);
+}
+
+main .gallery-test .container {
+    height: auto;
+
+    width: 100%;
+    margin: 2rem auto;
+
+    overflow: hidden;
+    position: relative;
+}
+
+main .gallery-test .container .gal-cont {
+    background: white;
+    padding: 1rem 0;
+}
+
+main .gallery-test .container .gallery {
+    top: 0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 550px;
+}
+
+main .gallery-test .container .gallery .cont-img {
+    padding: 0 1rem;
+    width: 900px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.8;
+
+    transform: scale(0.95);
+    transition: left 0.5s ease,
+                opacity 0.3s ease-in,
+
+                transform 0.3s ease;
+}
+
+main .gallery-test .container .gallery .cont-img.active {
+    left: 0;
+    opacity: 1;
+
+    transform: scale(1);
+    transition: left 0.5 ease,
+                opacity 0.3s ease-in,
+
+                transform 0.3s ease;
+}
+
+main .gallery-test .container .gallery .cont-img span {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: none;
+}
+
+main .gallery-test .container .gallery .cont-img.active span {
+    box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+main .gallery-test .container .gallery-buttons-slide {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    height: 582px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .gallery-test .container .gallery-buttons-slide .cont-button {
+    width: 50px;
+    height: 50px;
+    background: white;
+}
+
+main .gallery-test .container .gallery-buttons-slide .cont-button a {
+    background-image: url("https://img.icons8.com/ios/50/000000/expand-arrow--v2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+main .gallery-test .container .gallery-buttons-slide .prev.cont-button {
+    transform: rotate(90deg);
+}
+
+main .gallery-test .container .gallery-buttons-slide .next.cont-button {
+    transform: rotate(-90deg);
+}
+
+main .gallery-test .container .gallery-buttons-slide .prev.cont-button:hover {
+
+}
+
+main .gallery-test .container .gallery-buttons-slide .next.cont-button:hover {
+
+}
+
+main .gallery-test .container .bottom-bar {
+    margin: 1rem 0;
+    height: 60px;
+}
+
+main .gallery-test .container .bottom-bar .info-gal {
+    position: relative;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info {
+    max-width: 1300px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .bar {
+    font-size: 13px;
+    color: #292928;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .bar .text-page {
+    font-family: var(--h1-font-style);
+    font-weight: 500;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .left {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .left > * {
+    margin-right: 5px;
+}
+
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .left .divider {
+    transition: padding-right 0.2s ease;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .left:hover .divider {
+    padding-right: 10px;
+}
+
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .center {
+    max-width: 1000px;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .center p {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .right {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .right > * {
+    margin-left: 5px;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .right .divider {
+    transition: padding-left 0.2s ease;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .right:hover .divider {
+    padding-left: 10px;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info.active .text-page {
+    opacity: 0;
+    transform: translate(0, 20px);
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+main .gallery-test .container .bottom-bar .info-gal .cont-info .text-page {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+@media (max-width: 1000px) {
+    main .gallery-test .container .gallery {
+        height: 450px;
+        max-width: 700px;
+    }
+    main .gallery-test .container .gallery .cont-img {
+        width: 700px;
+    }
+    main .gallery-test .container .gallery-buttons-slide {
+        height: 482px;
+        max-width: 700px;
+    }
+    main .gallery-test .container .gallery-buttons-slide .cont-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 770px) {
+    main .gallery-test .container .gallery {
+        height: 350px;
+        max-width: 600px;
+    }
+    main .gallery-test .container .gallery .cont-img {
+        width: 600px;
+        padding: 0 0.5rem
+    }
+    main .gallery-test .container .gallery-buttons-slide {
+        height: 382px;
+        max-width: 600px;
+        padding: 1rem 0.5rem;
+    }
+    main .gallery-test .container .gallery-buttons-slide .cont-button {
+        width: 40px;
+        height: 40px;
+    }
+    main .gallery-test .container .bottom-bar .info-gal {
+        margin-top: 1rem;
+    }
+    main .gallery-test .container .bottom-bar .info-gal .cont-info {
+        padding-bottom: 0.5rem;
+    }
+    main .gallery-test .container .bottom-bar .info-gal .cont-info .bar span {
+        font-size: 10px;
+    }
+    main .gallery-test .container .bottom-bar .info-gal .cont-info .center.bar .text-page {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    main .gallery-test .container .gallery {
+        height: 250px;
+        max-width: 400px;
+    }
+    main .gallery-test .container .gallery .cont-img {
+        width: 400px;
+    }
+    main .gallery-test .container .gallery-buttons-slide {
+        height: 282px;
+        max-width: 400px;
+        padding: 0.5rem 0.5rem;
+    }
+    main .gallery-test .container .gallery-buttons-slide .cont-button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    main .gallery-test .container .gal-cont {
+        padding: 0.5rem 0;
+    }
+    main .gallery-test .container .gallery {
+        height: 200px;
+        max-width: 350px;
+    }
+    main .gallery-test .container .gallery .cont-img {
+        width: 350px;
+        padding: 0 0.1rem;
+    }
+    main .gallery-test .container .gallery-buttons-slide {
+        height: 232px;
+        max-width: 350px;
+        padding: 0.5rem 0.1rem;
+    }
+}
+
+main .whitespace-block {
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+    main .whitespace-block {
+        height: 200px;
+    }
+}
+
+main .workers-section {
+    display: flex;
+    justify-content: space-between;
+    min-height: 600px;
+    height: 900px;
+}
+
+main .workers-section .container {
+    width: 100%;
+    height: 100%;
+}
+
+main .workers-section .container.left {
+    position: relative;
+}
+
+main .workers-section .container.left .basic.cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+main .workers-section .container.left .basic.cont .info {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+main .workers-section .container.left .basic.cont .info > * {
+    margin-bottom: 2rem;
+}
+
+main .workers-section .container.left .basic.cont .info h1 {
+    font-family: var(--h2-font-style);
+    font-size: 25px;
+}
+
+main .workers-section .container.left .basic.cont .info p {
+    color: black;
+    font-size: 20px;
+}
+
+main .workers-section .container.left .relative.cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main .workers-section .container.left .relative.cont .worker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+main .workers-section .container.left .relative.cont .worker.active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+main .workers-section .container.left .relative.cont .worker .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .workers-section .container.left .relative.cont .worker .container span {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 400px;
+    height: 600px;
+    margin-bottom: 2rem;
+}
+
+main .workers-section .container.left .relative.cont .worker .container p {
+    text-align: center;
+    font-size: 20px;
+}
+
+main .workers-section .container.right {
+    background: var(--color-light-skin);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .workers-section .container.right .name-workers {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+main .workers-section .container.right .name-workers .text {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: var(--button-font-style);
+    color: black;
+    transition: color 0.3s ease;
+}
+
+main .workers-section .container.right .name-workers .text:hover {
+    color: var(--color-light-grey);
+}
+
+@media (max-width: 1000px) {
+    main .workers-section .container.left .relative.cont .worker .container span {
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 770px) {
+    main .workers-section .container.left .basic.cont .info h1 {
+        font-size: 23px;
+    }
+    main .workers-section .container.left .basic.cont .info p {
+        color: black;
+        font-size: 17px;
+    }
+    main .workers-section .container.left .relative.cont .worker .container span {
+        width: 250px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    main .workers-section .container.left .basic.cont .info h1 {
+        font-size: 20px;
+    }
+    main .workers-section .container.left .basic.cont .info p {
+        color: black;
+        font-size: 15px;
+    }
+    main .workers-section .container.left .relative.cont .worker .container span {
+        width: 200px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 440px) {
+    main .workers-section .container.left {
+        display: none;
+    }
+    main .workers-section .container.left .basic.cont .info h1 {
+        font-size: 20px;
+    }
+    main .workers-section .container.left .basic.cont .info p {
+        color: black;
+        font-size: 15px;
+    }
+    main .workers-section .container.left .relative.cont .worker .container span {
+        width: 200px;
+        height: 350px;
+    }
+}

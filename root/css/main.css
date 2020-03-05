@@ -1,0 +1,438 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 1000px;
+    overflow-x: hidden;
+}
+
+:root {
+    --h2-font-style: 'Domine', serif;
+    --button-font-style: 'Rubik';
+    --h1-font-style: 'Questrial';
+    --gymName-font-style: 'Cinzel Decorative';
+    --main-font-style: 'Libre Franklin';
+    --color-grey: #212121;
+    --color-light-grey: #004d3e;
+    --color-light-skin: #ede5ba;
+    --color-light-blue: #cbecd7;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    font-family: var(--main-font-style);
+    color: white;
+}
+
+.gym-name {
+    font-family: var(--gymName-font-style);
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+header {
+    position: fixed;
+    z-index: 5000;
+    width: 100%;
+    /*background: var(--color-grey);*/
+}
+
+header #header {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem 1rem 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.show-on-scroll {
+    transform: translate(0px, -60px);
+    transition: transform 1s ease;
+}
+
+header.show-on-scroll.is-visible {
+    transform: translate(0px, 0px);
+}
+
+header .left.bar {
+    padding-left: 3rem;
+}
+
+header .left.bar .gym-name {
+    transition: color 0.3s ease;
+}
+
+header .left.bar .gym-name.sectional-changes.black {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+header .right.bar {
+    padding-right: 3rem;
+}
+
+header .right.bar .nav-icon {
+    display: block;
+}
+
+header .right.bar .nav-icon .line {
+    margin-bottom: 6px;
+    height: 1px;
+    display: block;
+}
+
+header .right.bar .nav-icon .line {
+    background-color: black;
+    transition: background-color 0.3s ease;
+}
+
+header .right.bar .nav-icon.open .line.top {
+    transform: rotate(0deg);
+    width: 30px;
+    transition: transform 0.7s ease,
+                width 0.7s ease,
+                background-color 0.3s ease;
+}
+
+header .right.bar .nav-icon.open .line.mid {
+    width: 30px;
+    opacity: 1;
+    transition: opacity 0.7s ease,
+                width 0.7s ease,
+                background-color 0.3s ease;
+}
+
+header .right.bar .nav-icon.open .line.bottom {
+    transform: rotate(0deg);
+    width: 30px;
+    transition: transform 0.7s ease,
+                width 0.7s ease,
+                background-color 0.3s ease;
+    margin: 0;
+}
+
+header .right.bar .nav-icon.close .line.top {
+    transform: rotate(-42deg);
+    width: 22px;
+    transition: transform 0.7s ease,
+                width 0.7s ease,
+                background-color 0.3s ease;
+}
+
+header .right.bar .nav-icon.close .line.mid {
+    opacity: 0;
+    width: 22px;
+    transition: opacity 0.7s ease,
+                width 0.7s ease,
+                background-color 0.3s ease;
+}
+
+header .right.bar .nav-icon.close .line.bottom {
+    transform: rotate(42deg);
+    width: 22px;
+    transition: transform 0.7s ease,
+                width 0.7s ease,
+                background-color 0.3s ease;
+    margin: 0;
+}
+
+header .right.bar .nav-icon.close .line {
+    background-color: white;
+}
+
+header ul .nav-link {
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem;
+    font-family: var(--main-font-style);
+    font-size: 20px;
+    background: -webkit-linear-gradient(0deg, black, #e06329);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header ul .nav-link span {
+    position: absolute;
+    display: inline-block;
+    border-top: 1px solid black;
+    left: 0;
+    top: 50%;
+    width: 0;
+    -webkit-transition: width 0.5s ease;
+}
+
+header ul .nav-link:hover span {
+    width: 100%;
+}
+
+main .main-body {
+    max-width: 100%;
+    box-shadow: 0 10px 20px 5px rgba(30, 30, 30, 0.5);
+}
+
+main .fixed-back-body {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('http://2.bp.blogspot.com/-jGnKkdNJ8bo/TfEhDNDgFEI/AAAAAAAAAls/ANl7hRRvP_w/s1600/healthy_fruits_background-normal.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 1000px) {
+    main .fixed-back-body {
+        background-size: auto;
+    }
+}
+
+
+footer {
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+
+    background: var(--color-grey);
+}
+
+footer #footer {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer .bar {
+
+}
+
+footer .left.bar {
+    flex-grow: 2;
+}
+
+footer .left.bar .container {
+    width: 100%;
+}
+
+footer .right.bar {
+    flex-grow: 2.1;
+}
+
+footer .right.bar .container {
+    padding-left: 4rem;
+}
+
+footer .right.bar .container .top.cont {
+    width: auto;
+    min-height: 200px;
+    display: flex;
+}
+
+footer .right.bar .container .top.cont .container-links {
+    display: flex;
+    min-width: 300px;
+}
+
+footer .right.bar .container .top.cont .links {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .right.bar .container .top.cont .links a {
+    padding-bottom: 1rem;
+    font-family: var(--main-font-style);
+    font-size: 17px;
+}
+
+footer .right.bar .container .top.cont .adr-phn {
+    flex-grow: 3.1
+}
+
+footer .right.bar .container .top.cont .adr-phn p {
+    font-family: var(--main-font-style);
+    font-size: 11px;
+}
+
+footer .right.bar .container .down.cont {
+    padding-top: 1rem;
+}
+
+footer .right.bar .container .down.cont p {
+    font-family: var(--main-font-style);
+    font-size: 10px;
+    color: #808080;
+    padding-down: 1rem;
+}
+
+@media (max-width: 1000px) {
+    footer .right.bar .container .top.cont .links a {
+        font-size: 0.9em;
+    }
+
+    .gym-name {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 770px) {
+    footer #footer {
+        flex-direction: column;
+    }
+    footer .left.bar {
+        padding-bottom: 3rem;
+    }
+    footer .right.bar .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    footer .right.bar .container .top.cont {
+        flex-direction: column;
+    }
+
+    footer .right.bar .container .top.cont > * {
+        padding-bottom: 2rem;
+    }
+
+    footer .right.bar .container .top.cont .links a {
+        font-size: 0.9rem;
+    }
+
+    .gym-name {
+        font-size: 25px;
+    }
+
+    footer #footer {
+        padding: 0 3rem;
+    }
+}
+
+.main-loader {
+    margin-left: 0;
+    transition: all 0.7s ease;
+}
+
+.main-loader.active {
+    margin-left: -400px;
+    transition: all 0.7s ease;
+}
+
+.primary-navigation {
+    margin-right: -400px;
+    box-shadow: 1px 2px 20px 5px rgba(0, 0, 0, 0.4);
+
+    transition: all 0.7s ease;
+}
+
+.primary-navigation.active {
+    margin-right: 0;
+    transition: all 0.7s ease;
+}
+
+#primary-navigation {
+    position: fixed;
+    padding-top: 140px;
+    width: 400px;
+    top: 0;
+    right: 0;
+    background: var(--color-grey);
+}
+
+#primary-navigation .container {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+#primary-navigation .container .nav-bar {
+    padding-right: 2.5rem;
+}
+
+#primary-navigation .container .nav-bar ul {
+    list-style-type: none;
+}
+
+#primary-navigation .container .nav-bar li {
+    padding-bottom: 2rem;
+}
+
+#primary-navigation .container .nav-bar .link {
+    display: inline-block;
+    position: relative;
+    font-family: var(--main-font-style);
+    font-size: 23px;
+}
+
+#primary-navigation .container .nav-bar .link span {
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    left: 0;
+    top: 50%;
+    border-top: 2px solid white;
+    transition: width 0.3s ease-out;
+}
+
+#primary-navigation .container .nav-bar .link:hover span {
+    width: 100%;
+}
+
+#primary-navigation .container .cont {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+#primary-navigation .container .right.cont .bar {
+    padding-bottom: 1rem;
+}
+
+#primary-navigation .container .right.cont .bar > * {
+    margin-bottom: 5px;
+}
+
+#primary-navigation .container .right.cont .top h1 {
+    font-family: var(--h1-font-style);
+    font-size: 13px;
+    font-weight: 100;
+    color: white;
+}
+
+#primary-navigation .container .right.cont p {
+    font-size: 13px;
+}
+
+#primary-navigation .container .right.cont a {
+    color: #b0b0b0;
+    font-size: 13px;
+}
+
+#primary-navigation .container .right.cont .bottom .addr {
+    font-size: 10px;
+    margin-bottom: 1rem;
+}
+
+#primary-navigation .container .right.cont .bottom hr {
+    margin-bottom: 1rem;
+}
