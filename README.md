@@ -1,4 +1,4 @@
 # template-test
-practice in html and css
+practice in css and js
 
 site in heroku: https://mytemplate-test.herokuapp.com
