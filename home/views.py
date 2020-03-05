@@ -18,7 +18,7 @@ def home(request):
         return Http404('Worker doesnt exist')
 
     host = str(get_current_site(request))
-    url_media = 'http://' + host + settings.MEDIA_URL
+    url_media = 'https://' + host + settings.MEDIA_URL
     context = {
         'MEDIA_URL': url_media,
         'gallery': images,
