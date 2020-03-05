@@ -1,5 +1,5 @@
 
-$(function() {
+function showElementOnHover() {
     $('.name-workers .text').hover(function() {
         var elements = document.querySelectorAll('.name-workers .text');
         var workers = document.querySelectorAll('.relative.cont .worker');
@@ -21,4 +21,6 @@ $(function() {
             workers[i].classList.remove('active');
         }
     });
-});
+};
+
+showElementOnHover();
