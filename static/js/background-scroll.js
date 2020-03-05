@@ -13,4 +13,8 @@ function update() {
     addClassNameIfInCont(el, cont, 'black');
 };
 
-$(window).bind('scroll', update);
+function updateOnScroll() {
+    $(window).bind('scroll', update);
+};
+
+updateOnScroll();
