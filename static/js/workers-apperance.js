@@ -21,6 +21,6 @@ function showElementOnHover() {
             workers[i].classList.remove('active');
         }
     });
-};
+}
 
 showElementOnHover();

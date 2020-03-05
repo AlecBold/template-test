@@ -11,10 +11,10 @@ function update() {
     var el = document.querySelector('.nav-icon');
     var cont = document.querySelector('.greet');
     addClassNameIfInCont(el, cont, 'black');
-};
+}
 
 function updateOnScroll() {
     $(window).bind('scroll', update);
-};
+}
 
 updateOnScroll();
