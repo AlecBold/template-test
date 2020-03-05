@@ -5,6 +5,6 @@ site in heroku: https://mytemplate-test.herokuapp.com
 
 add images to gallery: https://mytemplate-test.herokuapp.com/admin
 
-login: admin
+login: user
 
-password: admin
+password: user1234
